@@ -1,0 +1,25 @@
+name : Linux Health Monitor 
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkput@v4
+   
+      - name: Make script executable
+        run: chmod +x monitor.sh
+
+      - name/: Make script executable
+        run:chmod +x montior.sh 
+
+      - name: Run system monitor 
+        run: ./monitor.sh
+    
+
