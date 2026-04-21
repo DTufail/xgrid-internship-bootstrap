@@ -17,7 +17,7 @@ jobs:
         run: chmod +x monitor.sh
 
       - name/: Make script executable
-        run:chmod +x montior.sh 
+        run: chmod +x montior.sh 
 
       - name: Run system monitor 
         run: ./monitor.sh
