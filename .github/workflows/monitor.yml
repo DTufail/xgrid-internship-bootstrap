@@ -1,4 +1,4 @@
-name : Linux Health Monitor 
+name: Linux Health Monitor
 
 on:
   push:
@@ -8,18 +8,13 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-   
+
       - name: Make script executable
         run: chmod +x monitor.sh
 
-      - name : Make script executable
-        run: chmod +x montior.sh 
-
-      - name: Run system monitor 
+      - name: Run system monitor
         run: ./monitor.sh
-    
-
