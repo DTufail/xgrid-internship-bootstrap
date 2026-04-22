@@ -43,7 +43,7 @@ while true; do
     # Generate new trace ID for this monitoring cycle
     trace_id=$(generate_trace_id)
     
-    CPU=$(top -l 1 | grep "CPU usage" | awk '{print $3}' | sed 's/%//')
+    CPU=$(top -l 2 | grep "CPU usage" | tail -n 1 | awk '{print $7}' | sed 's/%//' | awk '{print 100 - $1}')
     MEM=$(ps aux | awk '{sum += $6} END {printf "%.1f", sum/1024}')
     DISK=$(df -h / | tail -1 | awk '{print $5}' | sed 's/%//')
     PROC=$(ps aux | wc -l)
