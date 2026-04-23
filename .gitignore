@@ -21,3 +21,6 @@ Thumbs.db
 
 # Generated files
 *.pid
+EXPORTER_COMPARISON.md
+METRICS_FLOW.md
+MONITORING_JOURNEY.md
